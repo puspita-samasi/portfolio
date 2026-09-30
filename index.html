@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Puspita Samasi · Software Engineer</title>
+  <meta name="description" content="Puspita Samasi — Software Engineer at Pine Labs building Go microservices, rules engines and high-concurrency payment APIs.">
+  <meta name="author" content="Puspita Samasi">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f5f4f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#17100e" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Puspita Samasi · Software Engineer">
+  <meta property="og:description" content="Puspita Samasi — Software Engineer at Pine Labs building Go microservices, rules engines and high-concurrency payment APIs.">
+  <meta property="og:image" content="./assets/puspita.jpg">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./assets/puspita.jpg">
+  <script>try{var t=localStorage.getItem('ps-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<canvas id="dots" aria-hidden="true"></canvas>
+
+<header class="top" id="top">
+  <div class="wrap top-in">
+    <a class="mark" href="#home"><span class="mark-dot">PS</span>Puspita Samasi</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#work">Work</a><a href="#engine">Rules engine</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="icon-btn" id="theme" type="button" aria-label="Switch color theme">
+      <svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="status"><span class="pulse"></span>Software Engineer at Pine Labs · Bengaluru</span>
+        <h1>Puspita<span class="l2">Samasi<i>.</i></span></h1>
+        <p class="role">Backend engineer who writes <b>Go</b> for payments: <b>rules engines</b>, <b>gRPC services</b> and <b>high-concurrency APIs</b>.</p>
+        <p class="summary">3+ years building Golang microservices for gift-card and payment workflows. I design systems that evaluate thousands of business rules in milliseconds, stay up under half a million requests a day, and use Generative AI tools to make the development cycle faster.</p>
+        <ul class="chips" aria-label="Core stack"><li class="chip">Go</li><li class="chip">gRPC</li><li class="chip">Kafka</li><li class="chip">Redis</li><li class="chip">MySQL</li><li class="chip">AWS</li><li class="chip">Docker</li></ul>
+        <div class="cta">
+          <a class="btn btn-main" href="#work">See my work
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-line" href="#contact">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="portrait-wrap">
+        <figure class="portrait"><img src="./assets/puspita.jpg" alt="Puspita Samasi standing by a white railing, wearing a polka-dot top" width="560" height="700"></figure>
+        <div class="sticker" aria-hidden="true"><div class="sticker-in"><span>3+</span><small>years of Go</small></div></div>
+        <div class="evalcard" aria-label="Example rule evaluation log">
+          <header><span>campaign-engine · eval</span><span>live</span></header>
+          <ol id="feed">
+            <li><span class="id">txn#48213</span><span class="ru">ProductCode</span><span class="v ok">PASS</span><span class="ms">12ms</span></li>
+            <li><span class="id">txn#48214</span><span class="ru">PaymentCode</span><span class="v no">BLOCK</span><span class="ms">9ms</span></li>
+            <li><span class="id">txn#48215</span><span class="ru">CampaignWindow</span><span class="v ok">PASS</span><span class="ms">14ms</span></li>
+            <li><span class="id">txn#48216</span><span class="ru">MaxAmount</span><span class="v ok">PASS</span><span class="ms">11ms</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="metrics" aria-label="Impact in numbers">
+    <ul class="wrap">
+      <li class="ia"><b>100K<em>+</em></b><span>gift-card transactions evaluated daily</span></li>
+      <li class="ia"><b>500K<em>+</em></b><span>API requests a day at 99.5% uptime</span></li>
+      <li class="ia"><b>&lt;150<em>ms</em></b><span>to evaluate a transaction against its rules</span></li>
+      <li class="ia"><b>85<em>%</em></b><span>Redis cache hit rate on campaign data</span></li>
+    </ul>
+  </section>
+
+  <section class="sec" id="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Experience</span>
+        <h2>Three years on one payments platform, from intern to owner of the campaign engine.</h2>
+      </div>
+
+      <article class="job">
+        <div class="job-meta">
+          <h3>Software Engineer</h3>
+          <span class="co">Pine Labs Pvt Ltd</span>
+          <span class="when">Sep 2023 – Present · Bengaluru</span>
+          <span class="now">Current role</span>
+        </div>
+        <ul class="wins">
+          <li class="win ia"><span class="num">100K+</span><div><p>Built a Go <b>gift-card campaign rules engine</b> that processes 100K+ transactions a day, checking conditions and eligibility rules within 150ms.</p><div class="tags"><span>Go</span><span>Grule</span><span>GORM</span></div></div></li>
+          <li class="win ia"><span class="num">−40%</span><div><p>Connected the rules engine to the coupon service over <b>gRPC and Protocol Buffers</b>, cutting inter-service overhead by 40% versus the old API integration.</p><div class="tags"><span>gRPC</span><span>Protobuf</span></div></div></li>
+          <li class="win ia"><span class="num">−30%</span><div><p>Sped up rule processing by <b>compiling knowledge bases outside critical sections</b> and batch-loading 1,000+ rules per scope, reducing API response time by 30%.</p><div class="tags"><span>Performance</span><span>Concurrency</span></div></div></li>
+          <li class="win ia"><span class="num">99.5%</span><div><p>Designed <b>REST APIs</b> for campaign setup, rule validation, transaction processing and redemption, serving 500K+ requests a day at 99.5% uptime.</p><div class="tags"><span>Go</span><span>GORM</span><span>MySQL</span></div></div></li>
+          <li class="win ia"><span class="num">−65%</span><div><p>Added <b>Redis caching</b> for service tokens and campaign data with an 85% hit rate, cutting downstream service calls by 65%.</p><div class="tags"><span>Redis</span></div></div></li>
+          <li class="win ia"><span class="num">1K+</span><div><p>Built <b>concurrent bulk upload</b> with goroutines and buffered channels, handling 1,000+ records per upload with duplicate detection and field-level validation.</p><div class="tags"><span>Goroutines</span><span>Channels</span></div></div></li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-meta">
+          <h3>Software Intern</h3>
+          <span class="co">Pine Labs Pvt Ltd</span>
+          <span class="when">Dec 2022 – Aug 2023 · Bengaluru</span>
+        </div>
+        <ul class="plain">
+          <li>Wrote flexible, reusable code and libraries for upcoming product features.</li>
+          <li>Shipped features and fixed bugs as a backend developer on the product team.</li>
+          <li>Built APIs to improve project integration, working in PHP and Magento 2.</li>
+          <li>Worked alongside designers, developers and system administrators.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" id="engine">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">How the campaign engine thinks</span>
+        <h2>Try a transaction against the rules.</h2>
+        <p class="sec-lead">A simplified version of the eligibility checks the campaign engine runs. Pick the product, payment gateway, amount and day, and watch each condition pass or block the transaction.</p>
+      </div>
+
+      <div class="play">
+        <form class="form ia" id="txform" aria-label="Transaction to evaluate">
+          <div class="field">
+            <label for="product">Product code</label>
+            <select id="product">
+              <option value="amazon">amazon</option>
+              <option value="flipkart">flipkart</option>
+              <option value="myntra">myntra</option>
+              <option value="swiggy">swiggy</option>
+            </select>
+          </div>
+          <div class="field">
+            <label id="payLbl">Payment code</label>
+            <div class="seg" role="group" aria-labelledby="payLbl" id="pay">
+              <button type="button" data-v="payu" aria-pressed="true">payu</button>
+              <button type="button" data-v="razorpay" aria-pressed="false">razorpay</button>
+              <button type="button" data-v="cashfree" aria-pressed="false">cashfree</button>
+            </div>
+          </div>
+          <div class="field">
+            <label for="amt">Transaction amount <output id="amtOut" for="amt">₹2,500</output></label>
+            <input id="amt" type="range" min="100" max="20000" step="100" value="2500">
+          </div>
+          <div class="field">
+            <label id="dayLbl">Transaction time</label>
+            <div class="seg" role="group" aria-labelledby="dayLbl" id="day">
+              <button type="button" data-v="0" aria-pressed="false">Before campaign</button>
+              <button type="button" data-v="1" aria-pressed="true">During</button>
+              <button type="button" data-v="2" aria-pressed="false">After</button>
+            </div>
+          </div>
+          <p class="note">Rule values are illustrative. The real engine loads 1,000+ rules per scope.</p>
+        </form>
+
+        <div class="console ia" aria-live="polite">
+          <div class="console-bar"><span class="lights"><i></i><i></i><i></i></span><span>transaction.grl</span></div>
+<pre><span class="k">rule</span> <span class="s">"Transaction"</span> <span class="k">salience</span> <span class="n">10</span> {
+  <span class="k">when</span>
+    Txn.ProductCode == <span class="s">"amazon"</span> &amp;&amp; Txn.PaymentCode == <span class="s">"payu"</span>
+    &amp;&amp; Txn.Amount &lt;= <span class="n">10000</span>
+    &amp;&amp; Campaign.IsActive(Txn.Time)
+  <span class="k">then</span>
+    Txn.ApplyCashback(<span class="n">10</span>); Retract(<span class="s">"Transaction"</span>);
+}</pre>
+          <ul class="rules" id="rules"></ul>
+          <div class="verdict"><b id="verdict" class="ok">Eligible · 10% cashback</b><span id="elapsed">evaluated in 11ms</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="projects">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Projects</span>
+        <h2>Side work: fraud rules and recommendations.</h2>
+      </div>
+      <div class="proj-grid">
+        <article class="proj ia lift">
+          <div class="proj-top"><span class="lang"><i></i>Golang</span></div>
+          <h3>Transaction Risk Management System</h3>
+          <p>A fraud-prevention engine built on velocity and amount limits. Store and product limits enforce hourly and monthly thresholds, and dynamic rule evaluation blocks transactions that go over them. It plugs into an RFM transactions pipeline to flag risky behavior and anomalies in real time.</p>
+          <div class="flow" aria-label="Pipeline"><span>txn</span><em>→</em><span>velocity check</span><em>→</em><span>limit rules</span><em>→</em><span>RFM signal</span><em>→</em><span>allow / block</span></div>
+        </article>
+        <article class="proj ia lift">
+          <div class="proj-top"><span class="lang py"><i></i>Python</span></div>
+          <h3>Movie Recommendation System</h3>
+          <p>Content-based filtering that predicts what a viewer will like from their history, using movie metadata such as genre, ratings and keywords to produce personalised recommendations.</p>
+          <div class="flow" aria-label="Pipeline"><span>metadata</span><em>→</em><span>feature vectors</span><em>→</em><span>similarity</span><em>→</em><span>top picks</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="skills">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Toolbox</span>
+        <h2>What I build with.</h2>
+      </div>
+      <div class="sk-filter" role="tablist" aria-label="Filter skills" id="skfilter"></div>
+      <div class="sk-board ia" role="tabpanel" id="skpanel">
+        <ul class="sk-cloud" id="skcloud"></ul>
+        <div class="sk-legend"><span><i></i>Core, used daily</span><span><i class="o"></i>Working knowledge</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="education">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Education</span>
+        <h2>Computer applications, built on a maths foundation.</h2>
+      </div>
+      <div class="edu">
+        <div class="ed ia lift"><h3>NIT Jamshedpur</h3><span class="deg">Master of Computer Applications</span><span class="yrs">Sep 2020 – May 2023</span><span class="gpa">8.1<small>CGPA</small></span></div>
+        <div class="ed ia lift"><h3>Government Autonomous College, Rourkela</h3><span class="deg">B.Sc. Mathematics &amp; Computer Science</span><span class="yrs">Sep 2017 – Jul 2020</span><span class="gpa">8.3<small>CGPA</small></span></div>
+      </div>
+      <ul class="honors">
+        <li><b aria-hidden="true">★</b>Recognised at Pine Labs for outstanding contributions to a high-impact project.</li>
+        <li><b aria-hidden="true">◆</b>Member of the Competitive Programming Wing, NIT Jamshedpur.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <canvas class="contact-dots" id="cdots" aria-hidden="true"></canvas>
+        <h2>Let's build something <i>fast</i>.</h2>
+        <p>Open to backend and platform roles working with Go, distributed systems and payments. The quickest way to reach me is email.</p>
+        <div class="lines">
+          <div class="cline"><a class="cl-link" href="mailto:puspitasamasi004@gmail.com"><span class="lbl">Email</span><span class="val" id="em">puspitasamasi004@gmail.com</span><svg class="cl-go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a><button class="copy" type="button" data-copy="em">Copy</button></div>
+          <div class="cline"><a class="cl-link" href="tel:+917326970160"><span class="lbl">Mobile</span><span class="val" id="ph">+91 73269 70160</span><svg class="cl-go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a><button class="copy" type="button" data-copy="ph">Copy</button></div>
+          <div class="cline"><a class="cl-link" href="https://www.linkedin.com/in/puspita-samasi-0b4016229" target="_blank" rel="noopener"><span class="lbl">LinkedIn</span><span class="val">in/puspita-samasi</span><svg class="cl-go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div>
+          <div class="cline"><div class="cl-link static"><span class="lbl">Location</span><span class="val">Bengaluru, India</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Puspita Samasi</span><a class="mono" href="https://www.linkedin.com/in/puspita-samasi-0b4016229" target="_blank" rel="noopener">LinkedIn ↗</a></div></footer>
+
+<script src="./script.js" defer></script>
+</body>
+</html>
